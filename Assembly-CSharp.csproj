@@ -12,7 +12,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>Etched</RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{3286bef0-250b-431f-5699-4549843ef16a}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -52,8 +52,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\WordEvaluator.cs" />
      <Compile Include="Assets\Scripts\LetterBlockMover.cs" />
+     <Compile Include="Assets\Scripts\Word.cs" />
      <Compile Include="Assets\Scripts\Solver.cs" />
+     <Compile Include="Assets\Scripts\LineInterpreter.cs" />
      <Compile Include="Assets\Scripts\WordDictionary.cs" />
      <Compile Include="Assets\Scripts\DragInformation.cs" />
      <Compile Include="Assets\Scripts\InputHandler.cs" />
@@ -65,9 +68,6 @@
      <Compile Include="Assets\Scripts\AlphabetFrequency.cs" />
      <Compile Include="Assets\Scripts\LineManager.cs" />
      <Compile Include="Assets\Scripts\BlockAppearance.cs" />
-     <Compile Include="Assets\Scripts\WordEvaluator.cs" />
-     <Compile Include="Assets\Scripts\Word.cs" />
-     <Compile Include="Assets\Scripts\LineInterpreter.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -667,6 +667,9 @@
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>D:/Unity Projects/Etched/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>D:/Unity Projects/Etched/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>D:/Unity Projects/Etched/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
@@ -684,9 +687,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity Projects/Etched/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Unity Projects/Etched/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
