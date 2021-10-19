@@ -6,7 +6,14 @@ namespace Etched
     {
         [SerializeField] LetterBlock _blockPrefab;
         [SerializeField] GameObject _gameBoard;
+        
+        Vector2Int _spawnPosition;
     
+        void Awake()
+        {
+            _spawnPosition = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
+        }
+        
         void Update()
         {
             if (!LetterBlock.LetterBlockAtPosition(_spawnPosition)) SpawnBlock();
@@ -16,13 +23,5 @@ namespace Etched
         {
             Instantiate(_blockPrefab, (Vector2)_spawnPosition, Quaternion.identity, _gameBoard.transform);
         }
-
-        Vector2Int _spawnPosition;
-
-        void Awake()
-        {
-            _spawnPosition = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
-        }
-
     }
 }
