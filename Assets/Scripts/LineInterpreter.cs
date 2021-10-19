@@ -32,6 +32,7 @@ namespace Etched
 
         string GetWordBetween()
         {
+            _letterBlocks.Clear();
             string result = "";
             
             int dirX = Math.Sign(_endPos.x - _startPos.x);
@@ -45,7 +46,7 @@ namespace Etched
             {
                 LetterBlock block = LetterBlock.GetBlock(current);
                 result += block.Letter;
-                LetterBlocks.Add(block);
+                _letterBlocks.Add(block);
                 current += direction;
             }
 
