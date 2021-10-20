@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab90a2b19cd4459696679094f6a55b33, type: 3}
+  m_Name: TestReduced
+  m_EditorClassIdentifier: 
+  A: 10
+  B: 2
+  C: 4
+  D: 6
+  E: 10
+  F: 0
+  G: 2
+  H: 0
+  I: 10
+  J: 0
+  K: 2
+  L: 6
+  M: 0
+  N: 6
+  O: 10
+  P: 4
+  Q: 0
+  R: 6
+  S: 6
+  T: 6
+  U: 0
+  V: 0
+  W: 2
+  X: 0
+  Y: 0
+  Z: 0

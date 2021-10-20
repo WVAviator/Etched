@@ -6,11 +6,6 @@ namespace Etched
 {
     public class BlockAppearance : MonoBehaviour
     {
-        [SerializeField] Color commonColor = Color.green;
-        [SerializeField] float commonThreshold = 0.05f;
-        [SerializeField] Color uncommonColor = Color.yellow;
-        [SerializeField] float uncommonThreshold = 0.01f;
-        [SerializeField] Color rareColor = Color.red;
 
         [SerializeField] List<Sprite> blockSprites;
 
@@ -27,14 +22,7 @@ namespace Etched
 
         void Start()
         {
-            char c = _letterBlock.Letter;
-            float chance = AlphabetFrequency.CharChance(c);
-            
             SetBlockSprite();
-
-            if (chance < uncommonThreshold) SetColor(rareColor);
-            else if (chance < commonThreshold) SetColor(uncommonColor);
-            else SetColor(commonColor);
         }
 
         void SetColor(Color co)

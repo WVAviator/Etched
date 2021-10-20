@@ -11,13 +11,10 @@ namespace Etched
 
         public string Word => GetWordBetween();
 
+        public static event Action<LineInterpreter> OnLinePositionsUpdated;
+
         public List<LetterBlock> LetterBlocks => _letterBlocks;
         List<LetterBlock> _letterBlocks = new List<LetterBlock>();
-
-        public LineInterpreter(LetterBlock startBlock, LetterBlock endBlock)
-        {
-            Update(startBlock.LetterPosition, endBlock.LetterPosition);
-        }
 
         public LineInterpreter(Vector2Int startPos, Vector2Int endPos)
         {
@@ -26,12 +23,17 @@ namespace Etched
 
         public void Update(Vector2Int startPos, Vector2Int endPos)
         {
+            bool updated = _startPos != startPos || _endPos != endPos;
+            
             _startPos = startPos;
             _endPos = endPos;
+            
+            if (updated) OnLinePositionsUpdated?.Invoke(this);
         }
 
         string GetWordBetween()
         {
+            if (!IsValidLine()) return "";
             _letterBlocks.Clear();
             string result = "";
             

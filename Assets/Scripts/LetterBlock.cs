@@ -10,11 +10,12 @@ namespace Etched
     public class LetterBlock : MonoBehaviour
     {
 
+        [SerializeField] GameObject _explosionPrefab;
         TextMeshProUGUI _textMeshPro;
 
+        AlphabetFrequency _alphabetFrequency;
+
         LetterBlockMover _letterBlockMover;
-    
-        string _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         public char Letter => _letter;
         char _letter;
 
@@ -29,12 +30,12 @@ namespace Etched
         void Awake()
         {
             _textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
+            _alphabetFrequency = FindObjectOfType<AlphabetFrequency>();
             AdoptRandomLetter();
             _letterPosition =
                 new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
             _letterBlockMover = GetComponent<LetterBlockMover>();
         }
-
         public static bool LetterBlockAtPosition(Vector2Int v)
         {
             return AllLetterBlocks.FirstOrDefault(b => b.LetterPosition == v) != null;
@@ -62,20 +63,19 @@ namespace Etched
             {
                 if (b.LetterPosition.y > _letterPosition.y && b.LetterPosition.x == _letterPosition.x) b.Descend();
             }
+
+            Vector3 explosionLocation = transform.position;
+            explosionLocation.z -= 1;
+            Instantiate(_explosionPrefab, explosionLocation, Quaternion.Euler(0,0,Random.Range(0, 360)));
             Destroy(gameObject);
         }
 
         void AdoptRandomLetter()
         {
-            _letter = AlphabetFrequency.GetRandomChar();
+            _letter = _alphabetFrequency.GetRandomChar();
             _textMeshPro.text = Char.ToString(_letter);
         }
 
-        char GetRandomChar()
-        {
-            return _alphabet[Random.Range(0, 26)]; //TODO: Needs to be weighted based on letter
-        }
-    
         public LetterBlock ToNorth()
         {
             return AllLetterBlocks.FirstOrDefault(p =>

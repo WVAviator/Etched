@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02119fb42f7de084295d921fbee29b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _explosionPrefab: {fileID: 7483694752797215231, guid: 8ca0b9bc737ab27499ee255a0d88fdb0, type: 3}
 --- !u!114 &3322725601202817589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,11 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a99338b70b4834bdbce3642cf009d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commonColor: {r: 0.22227335, g: 1, b: 0.2028302, a: 1}
-  commonThreshold: 0.05
-  uncommonColor: {r: 1, g: 0.816195, b: 0.21226418, a: 1}
-  uncommonThreshold: 0.01
-  rareColor: {r: 1, g: 0.1462264, b: 0.1462264, a: 1}
   blockSprites:
   - {fileID: -5134280219694354542, guid: 37d96a9247104a049b0f29cce306b67e, type: 3}
   - {fileID: -5987127064664184565, guid: 37d96a9247104a049b0f29cce306b67e, type: 3}
