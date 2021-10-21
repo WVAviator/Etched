@@ -83,7 +83,7 @@ namespace Etched
                 return;
             }
             _activeLine.enabled = true;
-            Vector3[] positions = {new Vector3(a.x, a.y, -0.5f), new Vector3(b.x, b.y, -0.5f)};
+            Vector3[] positions = {new Vector3(a.x, a.y, -2f), new Vector3(b.x, b.y, -2f)};
             _activeLine.SetPositions(positions);
         }
 

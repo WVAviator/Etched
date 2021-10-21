@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58536b2e-2c9d-4e53-9318-a8936bb943b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LevelLetters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LevelLetters.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TemporaryWordDisplay.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TemporaryWordDisplay.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Etched/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Etched/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EmptyLine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EmptyLine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Explosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Explosion.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LetterBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LetterBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlphabetFrequency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlphabetFrequency.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlphabetFrequency.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlphabetFrequency.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockAppearance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BlockAppearance.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LetterBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LetterBlock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LineInterpreter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LineInterpreter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LineManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LineManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +31,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/ScoreBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Explosion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScoreText.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zhfsdg4D61jdZYNCkH3o9ELUmJ" />
   <component name="ProjectLevelVcsManager">
@@ -94,7 +88,8 @@
       <updated>1634605449381</updated>
       <workItem from="1634605463998" duration="5424000" />
       <workItem from="1634680265861" duration="3368000" />
-      <workItem from="1634685500059" duration="5430000" />
+      <workItem from="1634685500059" duration="5832000" />
+      <workItem from="1634765134994" duration="3278000" />
     </task>
     <servers />
   </component>

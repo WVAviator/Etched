@@ -31,11 +31,17 @@ namespace Etched
         {
             _textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
             _alphabetFrequency = FindObjectOfType<AlphabetFrequency>();
-            AdoptRandomLetter();
+            
             _letterPosition =
                 new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
             _letterBlockMover = GetComponent<LetterBlockMover>();
         }
+
+        void Start()
+        {
+            AdoptRandomLetter();
+        }
+        
         public static bool LetterBlockAtPosition(Vector2Int v)
         {
             return AllLetterBlocks.FirstOrDefault(b => b.LetterPosition == v) != null;

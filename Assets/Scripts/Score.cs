@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace Etched
     {
         List<Word> words = new List<Word>();
         TextMeshProUGUI scoreText;
+
+        public static event Action<int> OnScoreChanged;
 
         void Awake()
         {
@@ -30,7 +33,6 @@ namespace Etched
             words.Add(word);
             int totalScore = 0;
             foreach (Word w in words) totalScore += w.Score;
-            string scoreString = $"Score: {totalScore:D8}\n";
             string wordsFound = "";
             foreach (Word w in words)
             {
@@ -38,7 +40,8 @@ namespace Etched
                 wordsFound += w.Score + "\n";
             }
 
-            scoreText.text = scoreString + wordsFound;
+            scoreText.text = wordsFound;
+            OnScoreChanged?.Invoke(totalScore);
         }
     }
 }
