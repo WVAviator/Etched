@@ -8,12 +8,13 @@ namespace Etched
 {
     public class AlphabetFrequency : MonoBehaviour
     {
-        [SerializeField] LevelLetters _levelLetters;
+        //[SerializeField] LevelLetters _levelLetters;
+        [SerializeField] LevelQuote _levelQuote;
         string _weightedAlphabet;
 
         void Awake()
         {
-            _weightedAlphabet = _levelLetters.AlphabetDistributionString();
+            _weightedAlphabet = _levelQuote.LetterString();
         }
 
         public char GetRandomChar()

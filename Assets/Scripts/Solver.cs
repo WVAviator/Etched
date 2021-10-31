@@ -43,9 +43,9 @@ namespace Etched
             return board;
         }
 
-        List<string> WordsInBoard(char[,] board)
+        HashSet<string> WordsInBoard(char[,] board)
         {
-            List<string> words = new List<string>();
+            HashSet<string> words = new HashSet<string>();
 
             for (int y = 0; y < _rows; y++)
             {
@@ -95,7 +95,7 @@ namespace Etched
             stopWatch.Start();
         
             char[,] board = GetCurrentBoard();
-            List<string> words = WordsInBoard(board);
+            HashSet<string> words = WordsInBoard(board);
         
             stopWatch.Stop();
         
